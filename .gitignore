@@ -49,3 +49,5 @@ tmp
 
 # vi
 *.sw[klmnop]
+
+out
