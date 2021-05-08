@@ -1,0 +1,341 @@
+[ "java.util.LinkedHashSet", [ {
+  "@class" : "it.unibz.inf.kaos.data.UMLClass",
+  "@id" : "994e45ea-5b3c-4c68-89da-977fc118cf1c",
+  "startX" : 555,
+  "startY" : 253,
+  "name" : "OrderItem",
+  "relations" : [ "java.util.LinkedHashSet", [ {
+    "@class" : "it.unibz.inf.kaos.data.Association",
+    "@id" : "00681186-46f6-42e4-b400-cfaa2ba8efc2",
+    "startX" : -97,
+    "startY" : -89,
+    "name" : "includes",
+    "firstClass" : {
+      "@class" : "it.unibz.inf.kaos.data.UMLClass",
+      "@id" : "31f0362c-c137-4066-8028-2601b2367925",
+      "startX" : 272,
+      "startY" : 242,
+      "name" : "Order",
+      "relations" : [ "java.util.LinkedHashSet", [ "00681186-46f6-42e4-b400-cfaa2ba8efc2", {
+        "@class" : "it.unibz.inf.kaos.data.Association",
+        "@id" : "c3b31c94-7891-4d1e-9173-44546e4319b0",
+        "startX" : -88,
+        "startY" : -47,
+        "name" : "create",
+        "firstClass" : {
+          "@class" : "it.unibz.inf.kaos.data.UMLClass",
+          "@id" : "b316cec7-48a0-4fdb-b184-227126aed84b",
+          "startX" : 48,
+          "startY" : 357,
+          "name" : "Customer",
+          "relations" : [ "java.util.LinkedHashSet", [ "c3b31c94-7891-4d1e-9173-44546e4319b0", {
+            "@class" : "it.unibz.inf.kaos.data.Association",
+            "@id" : "2164a551-71fc-4c2b-b3fe-37d6f60bcd63",
+            "startX" : -99,
+            "startY" : -54,
+            "name" : "shipTo",
+            "firstClass" : {
+              "@class" : "it.unibz.inf.kaos.data.UMLClass",
+              "@id" : "2e39addc-6cfe-419f-bb5d-3ef0ea32dfcc",
+              "startX" : 204,
+              "startY" : 517,
+              "name" : "Shipment",
+              "relations" : [ "java.util.LinkedHashSet", [ {
+                "@class" : "it.unibz.inf.kaos.data.Association",
+                "@id" : "6ed0a693-de40-4c7b-b9ef-27673ab46aca",
+                "startX" : -65,
+                "startY" : -78,
+                "name" : "includes",
+                "firstClass" : "2e39addc-6cfe-419f-bb5d-3ef0ea32dfcc",
+                "secondClass" : {
+                  "@class" : "it.unibz.inf.kaos.data.UMLClass",
+                  "@id" : "a14cc080-5fe9-410b-86b3-310a708081aa",
+                  "startX" : 541,
+                  "startY" : 528,
+                  "name" : "ShipmentItem",
+                  "relations" : [ "java.util.LinkedHashSet", [ "6ed0a693-de40-4c7b-b9ef-27673ab46aca", {
+                    "@class" : "it.unibz.inf.kaos.data.Association",
+                    "@id" : "adee37e7-67f3-48fe-8fcf-6d1d65d3f1ef",
+                    "startX" : -45,
+                    "startY" : -105,
+                    "name" : "assign",
+                    "firstClass" : "994e45ea-5b3c-4c68-89da-977fc118cf1c",
+                    "secondClass" : "a14cc080-5fe9-410b-86b3-310a708081aa",
+                    "firstMultiplicity" : "C1_S",
+                    "secondMultiplicity" : "C1_S"
+                  } ] ]
+                },
+                "firstMultiplicity" : "C1_1",
+                "secondMultiplicity" : "C1_S"
+              } ] ],
+              "attributes" : [ "java.util.ArrayList", [ {
+                "@class" : "it.unibz.inf.kaos.data.Attribute",
+                "name" : "shipDate",
+                "type" : "DATE_TIME",
+                "multiplicity" : "C1_1"
+              } ] ]
+            },
+            "secondClass" : "b316cec7-48a0-4fdb-b184-227126aed84b",
+            "firstMultiplicity" : "C1_S",
+            "secondMultiplicity" : "C0_1"
+          }, {
+            "@class" : "it.unibz.inf.kaos.data.Association",
+            "@id" : "111c619a-d43a-4454-adab-f75929571aa6",
+            "startX" : -35,
+            "startY" : -42,
+            "name" : "hasInvoice",
+            "firstClass" : "b316cec7-48a0-4fdb-b184-227126aed84b",
+            "secondClass" : {
+              "@class" : "it.unibz.inf.kaos.data.UMLClass",
+              "@id" : "863dd987-0901-4fb3-a894-4237cfeed58b",
+              "startX" : 33,
+              "startY" : 167,
+              "name" : "Invoice",
+              "relations" : [ "java.util.LinkedHashSet", [ "111c619a-d43a-4454-adab-f75929571aa6", {
+                "@class" : "it.unibz.inf.kaos.data.Association",
+                "@id" : "0b36a3f2-8c53-4e0a-b8a4-bebf57a110e2",
+                "startX" : -55,
+                "startY" : -102,
+                "name" : "relation_16",
+                "firstClass" : "863dd987-0901-4fb3-a894-4237cfeed58b",
+                "secondClass" : "31f0362c-c137-4066-8028-2601b2367925",
+                "firstMultiplicity" : "C0_1",
+                "secondMultiplicity" : "C0_1"
+              }, {
+                "@class" : "it.unibz.inf.kaos.data.Association",
+                "@id" : "c2addf89-7bdd-449d-a1e8-87be82def42b",
+                "startX" : -33,
+                "startY" : -88,
+                "name" : "paymentItemInvoice",
+                "firstClass" : {
+                  "@class" : "it.unibz.inf.kaos.data.UMLClass",
+                  "@id" : "6b533a40-27b5-41af-9550-a0d37027cae2",
+                  "startX" : 44,
+                  "startY" : 53,
+                  "name" : "PaymentItem",
+                  "relations" : [ "java.util.LinkedHashSet", [ {
+                    "@class" : "it.unibz.inf.kaos.data.Association",
+                    "@id" : "e758cc5b-2c8f-429e-a22a-77d3fa652530",
+                    "startX" : -101,
+                    "startY" : -101,
+                    "name" : "includes",
+                    "firstClass" : {
+                      "@class" : "it.unibz.inf.kaos.data.UMLClass",
+                      "@id" : "a687bed5-d6bd-4da8-84ef-65a713b02b52",
+                      "startX" : 256,
+                      "startY" : 42,
+                      "name" : "Payment",
+                      "relations" : [ "java.util.LinkedHashSet", [ {
+                        "@class" : "it.unibz.inf.kaos.data.Association",
+                        "@id" : "982178ce-02be-4afc-9765-99ac0c43a6bc",
+                        "startX" : 0,
+                        "startY" : 0,
+                        "name" : "payTo",
+                        "firstClass" : "a687bed5-d6bd-4da8-84ef-65a713b02b52",
+                        "secondClass" : "31f0362c-c137-4066-8028-2601b2367925",
+                        "firstMultiplicity" : "C0_1",
+                        "secondMultiplicity" : "C0_1"
+                      } ] ],
+                      "attributes" : [ "java.util.ArrayList", [ {
+                        "@class" : "it.unibz.inf.kaos.data.Attribute",
+                        "name" : "payDate",
+                        "type" : "DATE_TIME",
+                        "multiplicity" : "C1_1"
+                      } ] ]
+                    },
+                    "secondClass" : "6b533a40-27b5-41af-9550-a0d37027cae2",
+                    "firstMultiplicity" : "C1_1",
+                    "secondMultiplicity" : "C1_S"
+                  }, "c2addf89-7bdd-449d-a1e8-87be82def42b" ] ]
+                },
+                "secondClass" : "863dd987-0901-4fb3-a894-4237cfeed58b",
+                "firstMultiplicity" : "C1_1",
+                "secondMultiplicity" : "C1_1"
+              } ] ],
+              "attributes" : [ "java.util.ArrayList", [ {
+                "@class" : "it.unibz.inf.kaos.data.Attribute",
+                "name" : "invDate",
+                "type" : "DATE_TIME",
+                "multiplicity" : "C1_1"
+              } ] ]
+            },
+            "firstMultiplicity" : "C0_1",
+            "secondMultiplicity" : "C1_S"
+          } ] ],
+          "attributes" : [ "java.util.ArrayList", [ {
+            "@class" : "it.unibz.inf.kaos.data.Attribute",
+            "name" : "cName",
+            "type" : "STRING",
+            "multiplicity" : "C1_1"
+          }, {
+            "@class" : "it.unibz.inf.kaos.data.Attribute",
+            "name" : "attr1",
+            "type" : "STRING",
+            "multiplicity" : "C1_1"
+          } ] ]
+        },
+        "secondClass" : "31f0362c-c137-4066-8028-2601b2367925",
+        "firstMultiplicity" : "C0_1",
+        "secondMultiplicity" : "C1_S"
+      }, "0b36a3f2-8c53-4e0a-b8a4-bebf57a110e2", "982178ce-02be-4afc-9765-99ac0c43a6bc" ] ],
+      "attributes" : [ "java.util.ArrayList", [ {
+        "@class" : "it.unibz.inf.kaos.data.Attribute",
+        "name" : "createDate",
+        "type" : "DATE_TIME",
+        "multiplicity" : "C1_1"
+      } ] ]
+    },
+    "secondClass" : "994e45ea-5b3c-4c68-89da-977fc118cf1c",
+    "firstMultiplicity" : "C1_1",
+    "secondMultiplicity" : "C1_S"
+  }, {
+    "@class" : "it.unibz.inf.kaos.data.Association",
+    "@id" : "adac7107-0a89-4d74-9093-fda74ccb57a5",
+    "startX" : -105,
+    "startY" : -42,
+    "name" : "hasProduct",
+    "firstClass" : "994e45ea-5b3c-4c68-89da-977fc118cf1c",
+    "secondClass" : {
+      "@class" : "it.unibz.inf.kaos.data.UMLClass",
+      "@id" : "d5e4bbe0-8f1a-43fe-bb4f-9ec31cb44bf0",
+      "startX" : 773,
+      "startY" : 242,
+      "name" : "Product",
+      "relations" : [ "java.util.LinkedHashSet", [ "adac7107-0a89-4d74-9093-fda74ccb57a5" ] ],
+      "attributes" : [ "java.util.ArrayList", [ {
+        "@class" : "it.unibz.inf.kaos.data.Attribute",
+        "name" : "pName",
+        "type" : "STRING",
+        "multiplicity" : "C1_1"
+      } ] ]
+    },
+    "firstMultiplicity" : "C1_1",
+    "secondMultiplicity" : "C1_S"
+  }, "adee37e7-67f3-48fe-8fcf-6d1d65d3f1ef" ] ]
+}, "6b533a40-27b5-41af-9550-a0d37027cae2", "31f0362c-c137-4066-8028-2601b2367925", "d5e4bbe0-8f1a-43fe-bb4f-9ec31cb44bf0", "a687bed5-d6bd-4da8-84ef-65a713b02b52", "b316cec7-48a0-4fdb-b184-227126aed84b", "a14cc080-5fe9-410b-86b3-310a708081aa", "2e39addc-6cfe-419f-bb5d-3ef0ea32dfcc", "863dd987-0901-4fb3-a894-4237cfeed58b", "00681186-46f6-42e4-b400-cfaa2ba8efc2", "0b36a3f2-8c53-4e0a-b8a4-bebf57a110e2", "adac7107-0a89-4d74-9093-fda74ccb57a5", "e758cc5b-2c8f-429e-a22a-77d3fa652530", "111c619a-d43a-4454-adab-f75929571aa6", "adee37e7-67f3-48fe-8fcf-6d1d65d3f1ef", "982178ce-02be-4afc-9765-99ac0c43a6bc", "c2addf89-7bdd-449d-a1e8-87be82def42b", "2164a551-71fc-4c2b-b3fe-37d6f60bcd63", "c3b31c94-7891-4d1e-9173-44546e4319b0", "6ed0a693-de40-4c7b-b9ef-27673ab46aca", {
+  "@class" : "it.unibz.inf.kaos.data.EventAnnotation",
+  "@id" : "6ef16934-8603-4e06-b5ad-cf78dc540c24",
+  "startX" : 425,
+  "startY" : 303,
+  "name" : {
+    "@class" : "it.unibz.inf.kaos.data.StringAttribute"
+  },
+  "relatedClass" : "31f0362c-c137-4066-8028-2601b2367925",
+  "label" : "CreateOrder",
+  "timestamp" : {
+    "@class" : "it.unibz.inf.kaos.data.NavigationalAttribute",
+    "path" : [ "java.util.LinkedHashSet", [ "31f0362c-c137-4066-8028-2601b2367925" ] ],
+    "umlClass" : "31f0362c-c137-4066-8028-2601b2367925",
+    "attribute" : {
+      "@class" : "it.unibz.inf.kaos.data.Attribute",
+      "name" : "createDate",
+      "type" : "DATE_TIME",
+      "multiplicity" : "C1_1"
+    }
+  },
+  "lifecycle" : "START",
+  "caseAnnotation" : {
+    "@class" : "it.unibz.inf.kaos.data.CaseAnnotation",
+    "@id" : "deea32da-985a-4fb7-b526-5fc4e3ecb8ba",
+    "startX" : 401,
+    "startY" : 135,
+    "relatedClass" : "31f0362c-c137-4066-8028-2601b2367925"
+  },
+  "casePath" : [ "java.util.LinkedHashSet", [ "31f0362c-c137-4066-8028-2601b2367925" ] ]
+}, {
+  "@class" : "it.unibz.inf.kaos.data.EventAnnotation",
+  "@id" : "2bffa229-bc1a-48ca-b19d-cd7e4baa7426",
+  "startX" : 85,
+  "startY" : 603,
+  "name" : {
+    "@class" : "it.unibz.inf.kaos.data.StringAttribute"
+  },
+  "relatedClass" : "2e39addc-6cfe-419f-bb5d-3ef0ea32dfcc",
+  "label" : "Signature",
+  "timestamp" : {
+    "@class" : "it.unibz.inf.kaos.data.NavigationalAttribute",
+    "path" : [ "java.util.LinkedHashSet", [ "2e39addc-6cfe-419f-bb5d-3ef0ea32dfcc" ] ],
+    "umlClass" : "2e39addc-6cfe-419f-bb5d-3ef0ea32dfcc",
+    "attribute" : {
+      "@class" : "it.unibz.inf.kaos.data.Attribute",
+      "name" : "shipDate",
+      "type" : "DATE_TIME",
+      "multiplicity" : "C1_1"
+    }
+  },
+  "lifecycle" : "COMPLETE",
+  "caseAnnotation" : "deea32da-985a-4fb7-b526-5fc4e3ecb8ba",
+  "casePath" : [ "java.util.LinkedHashSet", [ "6ed0a693-de40-4c7b-b9ef-27673ab46aca", "adee37e7-67f3-48fe-8fcf-6d1d65d3f1ef", "00681186-46f6-42e4-b400-cfaa2ba8efc2", "31f0362c-c137-4066-8028-2601b2367925" ] ]
+}, {
+  "@class" : "it.unibz.inf.kaos.data.EventAnnotation",
+  "@id" : "929ad045-d807-4997-b7aa-540cb738e205",
+  "startX" : 469,
+  "startY" : 3,
+  "name" : {
+    "@class" : "it.unibz.inf.kaos.data.StringAttribute"
+  },
+  "relatedClass" : "a687bed5-d6bd-4da8-84ef-65a713b02b52",
+  "label" : "PaySuccess",
+  "timestamp" : {
+    "@class" : "it.unibz.inf.kaos.data.NavigationalAttribute",
+    "path" : [ "java.util.LinkedHashSet", [ "a687bed5-d6bd-4da8-84ef-65a713b02b52" ] ],
+    "umlClass" : "a687bed5-d6bd-4da8-84ef-65a713b02b52",
+    "attribute" : {
+      "@class" : "it.unibz.inf.kaos.data.Attribute",
+      "name" : "payDate",
+      "type" : "DATE_TIME",
+      "multiplicity" : "C1_1"
+    }
+  },
+  "lifecycle" : "COMPLETE",
+  "caseAnnotation" : "deea32da-985a-4fb7-b526-5fc4e3ecb8ba",
+  "casePath" : [ "java.util.LinkedHashSet", [ "982178ce-02be-4afc-9765-99ac0c43a6bc", "31f0362c-c137-4066-8028-2601b2367925" ] ]
+}, {
+  "@class" : "it.unibz.inf.kaos.data.EventAnnotation",
+  "@id" : "f1210eab-1649-4582-872c-3dbb74c3466a",
+  "startX" : 128,
+  "startY" : 253,
+  "name" : {
+    "@class" : "it.unibz.inf.kaos.data.StringAttribute"
+  },
+  "relatedClass" : "863dd987-0901-4fb3-a894-4237cfeed58b",
+  "label" : "PrintInvoice",
+  "timestamp" : {
+    "@class" : "it.unibz.inf.kaos.data.NavigationalAttribute",
+    "path" : [ "java.util.LinkedHashSet", [ "863dd987-0901-4fb3-a894-4237cfeed58b" ] ],
+    "umlClass" : "863dd987-0901-4fb3-a894-4237cfeed58b",
+    "attribute" : {
+      "@class" : "it.unibz.inf.kaos.data.Attribute",
+      "name" : "invDate",
+      "type" : "DATE_TIME",
+      "multiplicity" : "C1_1"
+    }
+  },
+  "lifecycle" : "COMPLETE",
+  "caseAnnotation" : "deea32da-985a-4fb7-b526-5fc4e3ecb8ba",
+  "casePath" : [ "java.util.LinkedHashSet", [ "111c619a-d43a-4454-adab-f75929571aa6", "c3b31c94-7891-4d1e-9173-44546e4319b0", "31f0362c-c137-4066-8028-2601b2367925" ] ]
+}, {
+  "@class" : "it.unibz.inf.kaos.data.EventAnnotation",
+  "@id" : "000f9d27-5e14-4d32-be0f-46e415f8a5fd",
+  "startX" : 288,
+  "startY" : 403,
+  "name" : {
+    "@class" : "it.unibz.inf.kaos.data.StringAttribute"
+  },
+  "relatedClass" : "2e39addc-6cfe-419f-bb5d-3ef0ea32dfcc",
+  "label" : "Dispatch",
+  "timestamp" : {
+    "@class" : "it.unibz.inf.kaos.data.NavigationalAttribute",
+    "path" : [ "java.util.LinkedHashSet", [ "2e39addc-6cfe-419f-bb5d-3ef0ea32dfcc" ] ],
+    "umlClass" : "2e39addc-6cfe-419f-bb5d-3ef0ea32dfcc",
+    "attribute" : {
+      "@class" : "it.unibz.inf.kaos.data.Attribute",
+      "name" : "shipDate",
+      "type" : "DATE_TIME",
+      "multiplicity" : "C1_1"
+    }
+  },
+  "lifecycle" : "COMPLETE",
+  "caseAnnotation" : "deea32da-985a-4fb7-b526-5fc4e3ecb8ba",
+  "casePath" : [ "java.util.LinkedHashSet", [ "6ed0a693-de40-4c7b-b9ef-27673ab46aca", "adee37e7-67f3-48fe-8fcf-6d1d65d3f1ef", "00681186-46f6-42e4-b400-cfaa2ba8efc2", "31f0362c-c137-4066-8028-2601b2367925" ] ]
+}, "deea32da-985a-4fb7-b526-5fc4e3ecb8ba" ] ]

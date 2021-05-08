@@ -1,0 +1,24 @@
+[PrefixDeclaration]
+:		http://www.example.com/erpexample.owl/
+owl:		http://www.w3.org/2002/07/owl#
+rdf:		http://www.w3.org/1999/02/22-rdf-syntax-ns#
+xml:		http://www.w3.org/XML/1998/namespace
+xsd:		http://www.w3.org/2001/XMLSchema#
+obda:		https://w3id.org/obda/vocabulary#
+rdfs:		http://www.w3.org/2000/01/rdf-schema#
+onprom:		http://kaos.inf.unibz.it/onprom/
+
+[MappingDeclaration] @collection [[
+mappingId	MAPID-4b096ab189ff414e969dbb355c4e1a22
+target		:product/{rowid} a :Product . 
+source		SELECT * FROM llx_product
+
+mappingId	MAPID-8adb5a75b8614b23be4cf153ebe75247
+target		:customer/{rowid} a :Customer . 
+source		SELECT * FROM llx_societe
+
+mappingId	MAPID-661700c72aaf49ac9064f02424f60007
+target		:order/id={rowid} a :Order ; :createDate {date_creation}^^xsd:dateTime ; :commandeDate {date_commande}^^xsd:date . 
+source		SELECT * FROM llx_commande
+]]
+
