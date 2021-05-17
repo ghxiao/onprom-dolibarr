@@ -21,5 +21,9 @@ source		SELECT * FROM llx_societe
 mappingId	salesOrder
 target		data:order/id={rowid} a :SalesOrder ; :createDate {date_creation}^^xsd:dateTime ; :orderDate {date_commande}^^xsd:date . 
 source		SELECT * FROM llx_commande
+
+mappingId	payment
+target		data:payment/id={rowid} a :Payment ; :payName {ref}^^xsd:string ; :payDate {datep}^^xsd:string . 
+source		SELECT * FROM llx_paiement
 ]]
 
