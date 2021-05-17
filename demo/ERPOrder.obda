@@ -25,5 +25,9 @@ source		SELECT * FROM llx_commande
 mappingId	payment
 target		data:payment/id={rowid} a :Payment ; :payName {ref}^^xsd:string ; :payDate {datep}^^xsd:string . 
 source		SELECT * FROM llx_paiement
+
+mappingId	MAPID-b1bc000123134bbebf4b68ce9e8721c4
+target		data:shipment/id={rowid} a :Shipment ; :shipName {ref}^^xsd:string ; :shipDate {date_delivery}^^xsd:dateTime . 
+source		SELECT * FROM llx_expedition
 ]]
 

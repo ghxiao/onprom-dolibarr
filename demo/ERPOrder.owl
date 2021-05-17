@@ -245,6 +245,12 @@
     
 
 
+    <!-- http://www.example.com/dolibarr#shipName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.com/dolibarr#shipName"/>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
