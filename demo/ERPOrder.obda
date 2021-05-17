@@ -15,19 +15,19 @@ target		data:product/{rowid} a :Product .
 source		SELECT * FROM llx_product
 
 mappingId	customer
-target		data:customer/{rowid} a :Customer . 
+target		data:customer/{rowid} a :Customer ; :cName {nom}^^xsd:string . 
 source		SELECT * FROM llx_societe
 
 mappingId	salesOrder
-target		data:order/id={rowid} a :SalesOrder ; :createDate {date_creation}^^xsd:dateTime ; :orderDate {date_commande}^^xsd:date . 
+target		data:customer/{fk_user_author} :create data:order/{rowid} . data:order/{rowid} a :SalesOrder ; :createDate {date_creation}^^xsd:dateTime ; :orderDate {date_commande}^^xsd:date . 
 source		SELECT * FROM llx_commande
 
 mappingId	payment
-target		data:payment/id={rowid} a :Payment ; :payName {ref}^^xsd:string ; :payDate {datep}^^xsd:string . 
+target		data:payment/{rowid} a :Payment ; :payName {ref}^^xsd:string ; :payDate {datep}^^xsd:dateTime . 
 source		SELECT * FROM llx_paiement
 
-mappingId	MAPID-b1bc000123134bbebf4b68ce9e8721c4
-target		data:shipment/id={rowid} a :Shipment ; :shipName {ref}^^xsd:string ; :shipDate {date_delivery}^^xsd:dateTime . 
+mappingId	shipment
+target		data:shipment/{rowid} a :Shipment ; :shipName {ref}^^xsd:string ; :shipDate {date_delivery}^^xsd:dateTime . 
 source		SELECT * FROM llx_expedition
 ]]
 
