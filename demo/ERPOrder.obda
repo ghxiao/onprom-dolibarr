@@ -31,11 +31,11 @@ target		data:shipment/{rowid} a :Shipment ; :shipName {ref}^^xsd:string ; :shipD
 source		SELECT * FROM llx_expedition
 
 mappingId	invoice
-target		data:invoice/{rowid} a :Invoice ; :invNo {ref}^^xsd:string ; :invDate {datef}^^xsd:date . 
+target		data:invoice/{rowid} a :Invoice ; :invNo {ref}^^xsd:string ; :invDate {tms}^^xsd:dateTime . 
 source		SELECT * FROM llx_facture
 
 mappingId	shipmentItem
-target		data:shipmentItem/{rowid} a :ShipmentItem ; :qty {qty}^^xsd:double . 
+target		data:shipmentItem/{rowid} a :ShipmentItem . 
 source		SELECT * FROM llx_expeditiondet
 
 mappingId	hasShipmentItem
@@ -61,5 +61,13 @@ source		SELECT * FROM llx_commandedet
 mappingId	salesOrderHasProduct
 target		data:salesOrder/{fk_commande} :hasProduct data:product/{fk_product} . 
 source		SELECT fk_commande, fk_product FROM llx_commandedet
+
+mappingId	hasInvoice
+target		data:coustomer/{cusId} :hasInvoice data:invoice/{rowid} . 
+source		SELECT fk_soc AS cusId , rowid FROM llx_facture
+
+mappingId	payTo
+target		data:payment/{pay} :payTo data:invoice/{inv} . 
+source		SELECT fk_facture as inv,fk_paiement as pay FROM llx_paiement_facture
 ]]
 
