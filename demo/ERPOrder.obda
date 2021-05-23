@@ -67,7 +67,10 @@ target		data:coustomer/{cusId} :hasInvoice data:invoice/{rowid} .
 source		SELECT fk_soc AS cusId , rowid FROM llx_facture
 
 mappingId	payTo
-target		data:payment/{pay} :payTo data:invoice/{inv} . 
-source		SELECT fk_facture as inv,fk_paiement as pay FROM llx_paiement_facture
+target		data:payment/{paymentId} :payTo data:salesOrder/{oid} . 
+source		SELECT DISTINCT pf.fk_paiement AS paymentId, c.rowid AS oid, s.rowid as customerId from llx_paiement_facture pf,llx_facture f,llx_commande c,llx_societe s
+			WHERE f.fk_soc = s.rowid AND
+			pf.fk_facture = f.rowid AND
+			c.fk_soc = f.fk_soc
 ]]
 
