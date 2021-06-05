@@ -2,22 +2,29 @@ version: "3"
 
 services:
   db:
-    image: mariadb:latest
+    #image: mariadb:latest
+    image: mysql:latest
     environment:
       MYSQL_ROOT_PASSWORD: root
+      MYSQL_PASSWORD: doli
+      MYSQL_USER: doli
       MYSQL_DATABASE: dolibarr
     volumes:
       - data-mysql:/var/lib/mysql
       - ./mysql:/docker-entrypoint-initdb.d
     ports:
-      - '0.0.0.0:13306:3306'        
-        
+      - '0.0.0.0:13306:3306'    
+    cap_add:
+      - SYS_NICE  # CAP_SYS_NICE
+    command: --default-authentication-plugin=mysql_native_password
+
+
   dolibarr:
     image: tuxgasy/dolibarr
     environment:
       DOLI_DB_HOST: db
-      DOLI_DB_USER: root
-      DOLI_DB_PASSWORD: root
+      DOLI_DB_USER: doli
+      DOLI_DB_PASSWORD: doli
       DOLI_DB_NAME: dolibarr
       DOLI_URL_ROOT: 'http://0.0.0.0'
       PHP_INI_DATE_TIMEZONE: 'Europe/Paris'
