@@ -64,16 +64,16 @@ source		SELECT fk_commande, fk_product FROM llx_commandedet
 
 mappingId	hasInvoice
 target		data:coustomer/{coustomerId} :hasInvoice data:invoice/{invoiceId} ; :create data:salesOrder/{orderId} . 
-source		SELECT DISTINCT f.fk_soc AS coustomerId,f.rowid AS invoiceId,c.rowid AS orderId FROM llx_facture f,llx_commande c
-			WHERE f.fk_soc = c.fk_soc
+source		SELECT DISTINCT f.fk_soc AS coustomerId,f.rowid AS invoiceId,c.rowid AS orderId FROM llx_facture f left join llx_commande c
+			on f.fk_soc = c.fk_soc
 
 mappingId	payTo
 target		data:payment/{paymentId} :payTo data:salesOrder/{oid} ; :payDate {payDate}^^xsd:dateTime . 
-source		SELECT DISTINCT pf.fk_paiement AS paymentId, c.rowid AS oid, s.rowid as customerId, p.tms AS payDate from llx_paiement_facture pf,llx_facture f,llx_commande c,llx_societe s,llx_paiement p
-			WHERE f.fk_soc = s.rowid AND
-			pf.fk_facture = f.rowid AND
-			c.fk_soc = f.fk_soc AND
-			pf.fk_paiement = p.rowid
+source		SELECT DISTINCT pf.fk_paiement AS paymentId, c.rowid AS oid, s.rowid as customerId, p.tms AS payDate from llx_paiement_facture pf left join llx_facture f
+			on pf.fk_facture = f.rowid left join llx_commande c
+			on c.fk_soc = f.fk_soc  left join llx_societe s
+			on f.fk_soc = s.rowid  left join llx_paiement p
+			on pf.fk_paiement = p.rowid
 
 mappingId	shipTo
 target		data:shipment/{rowid} :shipTo data:customer/{fk_soc} ; :shipDate {date_delivery}^^xsd:dateTime . 
