@@ -1,0 +1,697 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- This file is a XOC log. Its definition and semantic are -->
+<!-- available from http://www.win.tue.nl/ocbc/. -->
+<!-- It conforms to the XML serialization. -->
+<log xoc.version="1.0">
+	<string key="format" value="update"/>
+	<event>
+		<string key="id" value="create_order1"/>
+		<string key="activity" value="create_order"/>
+		<string key="timestamp" value="2017-08-11 10:33:37"/>
+		<string key="id_user_author" value="null"/>
+		<model>
+			<objects>
+				<object>
+					<string key="id" value="order1"/>
+					<string key="class" value="order"/>
+					<string key="lifecycle" value="add"/>
+					<string key="create_order" value="2017-08-11 10:33:37"/>
+					<string key="rowid" value="1"/>
+					<string key="customer" value="1"/>
+				</object>
+				<object>
+					<string key="id" value="customer1"/>
+					<string key="class" value="customer"/>
+					<string key="lifecycle" value="add"/>
+				</object>
+				<object>
+					<string key="id" value="order_line1"/>
+					<string key="class" value="order_line"/>
+					<string key="lifecycle" value="add"/>
+					<string key="id_product" value="computer"/>
+					<string key="qty" value="2"/>
+					<string key="total_amount_with_tax" value="1190.00000000"/>
+					<string key="order_id" value="1"/>
+					<string key="rowid" value="1"/>
+				</object>
+				<object>
+					<string key="id" value="order_line2"/>
+					<string key="class" value="order_line"/>
+					<string key="lifecycle" value="add"/>
+					<string key="id_product" value="phone"/>
+					<string key="qty" value="3"/>
+					<string key="total_amount_with_tax" value="476.00000000"/>
+					<string key="order_id" value="1"/>
+					<string key="rowid" value="2"/>
+				</object>
+			</objects>
+			<relations>
+				<relation>
+					<string key="id" value="customer1-order1"/>
+					<string key="relation" value="customer-fk_soc-order"/>
+					<string key="sourceobjectid" value="customer1"/>
+					<string key="targetobjectid" value="order1"/>
+					<string key="lifecycle" value="add"/>
+				</relation>
+				<relation>
+					<string key="id" value="order1-order_line1"/>
+					<string key="relation" value="order-fk_commande-order_line"/>
+					<string key="sourceobjectid" value="order1"/>
+					<string key="targetobjectid" value="order_line1"/>
+					<string key="lifecycle" value="add"/>
+				</relation>
+				<relation>
+					<string key="id" value="order1-order_line2"/>
+					<string key="relation" value="order-fk_commande-order_line"/>
+					<string key="sourceobjectid" value="order1"/>
+					<string key="targetobjectid" value="order_line2"/>
+					<string key="lifecycle" value="add"/>
+				</relation>
+			</relations>
+		</model>
+		<references>
+			<object>
+				<string key="id" value="order_line1"/>
+			</object>
+			<object>
+				<string key="id" value="order_line2"/>
+			</object>
+			<object>
+				<string key="id" value="order1"/>
+			</object>
+		</references>
+	</event>
+	<event>
+		<string key="id" value="create_order2"/>
+		<string key="activity" value="create_order"/>
+		<string key="timestamp" value="2017-08-13 16:28:15"/>
+		<string key="id_user_author" value="null"/>
+		<model>
+			<objects>
+				<object>
+					<string key="id" value="order2"/>
+					<string key="class" value="order"/>
+					<string key="lifecycle" value="add"/>
+					<string key="create_order" value="2017-08-13 16:28:15"/>
+					<string key="rowid" value="2"/>
+					<string key="customer" value="1"/>
+				</object>
+				<object>
+					<string key="id" value="order_line3"/>
+					<string key="class" value="order_line"/>
+					<string key="lifecycle" value="add"/>
+					<string key="id_product" value="cup"/>
+					<string key="qty" value="3"/>
+					<string key="total_amount_with_tax" value="1.00000000"/>
+					<string key="order_id" value="2"/>
+					<string key="rowid" value="3"/>
+				</object>
+				<object>
+					<string key="id" value="order_line4"/>
+					<string key="class" value="order_line"/>
+					<string key="lifecycle" value="add"/>
+					<string key="id_product" value="TV"/>
+					<string key="qty" value="2"/>
+					<string key="total_amount_with_tax" value="952.00000000"/>
+					<string key="order_id" value="2"/>
+					<string key="rowid" value="4"/>
+				</object>
+			</objects>
+			<relations>
+				<relation>
+					<string key="id" value="customer1-order2"/>
+					<string key="relation" value="customer-fk_soc-order"/>
+					<string key="sourceobjectid" value="customer1"/>
+					<string key="targetobjectid" value="order2"/>
+					<string key="lifecycle" value="add"/>
+				</relation>
+				<relation>
+					<string key="id" value="order2-order_line3"/>
+					<string key="relation" value="order-fk_commande-order_line"/>
+					<string key="sourceobjectid" value="order2"/>
+					<string key="targetobjectid" value="order_line3"/>
+					<string key="lifecycle" value="add"/>
+				</relation>
+				<relation>
+					<string key="id" value="order2-order_line4"/>
+					<string key="relation" value="order-fk_commande-order_line"/>
+					<string key="sourceobjectid" value="order2"/>
+					<string key="targetobjectid" value="order_line4"/>
+					<string key="lifecycle" value="add"/>
+				</relation>
+			</relations>
+		</model>
+		<references>
+			<object>
+				<string key="id" value="order_line3"/>
+			</object>
+			<object>
+				<string key="id" value="order_line4"/>
+			</object>
+			<object>
+				<string key="id" value="order2"/>
+			</object>
+		</references>
+	</event>
+	<event>
+		<string key="id" value="create_shipment1"/>
+		<string key="activity" value="create_shipment"/>
+		<string key="timestamp" value="2017-08-14 11:36:35"/>
+		<model>
+			<objects>
+				<object>
+					<string key="id" value="shipment1"/>
+					<string key="class" value="shipment"/>
+					<string key="lifecycle" value="add"/>
+					<string key="create_shipment" value="2017-08-14 11:36:35"/>
+					<string key="rowid" value="1"/>
+					<string key="customer" value="1"/>
+				</object>
+				<object>
+					<string key="id" value="shipment_line1"/>
+					<string key="class" value="shipment_line"/>
+					<string key="lifecycle" value="add"/>
+					<string key="orderline_id" value="1"/>
+					<string key="qty" value="1"/>
+					<string key="shipment_id" value="1"/>
+					<string key="rowid" value="1"/>
+				</object>
+			</objects>
+			<relations>
+				<relation>
+					<string key="id" value="customer1-shipment1"/>
+					<string key="relation" value="customer-fk_soc-shipment"/>
+					<string key="sourceobjectid" value="customer1"/>
+					<string key="targetobjectid" value="shipment1"/>
+					<string key="lifecycle" value="add"/>
+				</relation>
+				<relation>
+					<string key="id" value="shipment1-shipment_line1"/>
+					<string key="relation" value="shipment-fk_expedition-shipment_line"/>
+					<string key="sourceobjectid" value="shipment1"/>
+					<string key="targetobjectid" value="shipment_line1"/>
+					<string key="lifecycle" value="add"/>
+				</relation>
+				<relation>
+					<string key="id" value="order_line1-shipment_line1"/>
+					<string key="relation" value="order_line-fk_origin_line-shipment_line"/>
+					<string key="sourceobjectid" value="order_line1"/>
+					<string key="targetobjectid" value="shipment_line1"/>
+					<string key="lifecycle" value="add"/>
+				</relation>
+			</relations>
+		</model>
+		<references>
+			<object>
+				<string key="id" value="shipment1"/>
+			</object>
+			<object>
+				<string key="id" value="shipment_line1"/>
+			</object>
+		</references>
+	</event>
+	<event>
+		<string key="id" value="create_invoice1"/>
+		<string key="activity" value="create_invoice"/>
+		<string key="timestamp" value="2017-08-15 09:13:27"/>
+		<model>
+			<objects>
+				<object>
+					<string key="id" value="invoice1"/>
+					<string key="class" value="invoice"/>
+					<string key="lifecycle" value="add"/>
+					<string key="create_invoice" value="2017-08-15 09:13:27"/>
+					<string key="total_amount_with_tax" value="2380.00000000"/>
+					<string key="customer" value="1"/>
+					<string key="rowid" value="1"/>
+				</object>
+				<object>
+					<string key="id" value="element_relation1"/>
+					<string key="class" value="element_relation"/>
+					<string key="lifecycle" value="add"/>
+					<string key="targettype" value="facture"/>
+					<string key="fk_source" value="1"/>
+					<string key="sourcetype" value="commande"/>
+					<string key="fk_target" value="1"/>
+					<string key="rowid" value="1"/>
+				</object>
+			</objects>
+			<relations>
+				<relation>
+					<string key="id" value="customer1-invoice1"/>
+					<string key="relation" value="customer-fk_soc-invoice"/>
+					<string key="sourceobjectid" value="customer1"/>
+					<string key="targetobjectid" value="invoice1"/>
+					<string key="lifecycle" value="add"/>
+				</relation>
+				<relation>
+					<string key="id" value="order1-element_relation1"/>
+					<string key="relation" value="order-fk_source-element_relation"/>
+					<string key="sourceobjectid" value="order1"/>
+					<string key="targetobjectid" value="element_relation1"/>
+					<string key="lifecycle" value="add"/>
+				</relation>
+				<relation>
+					<string key="id" value="invoice1-element_relation1"/>
+					<string key="relation" value="invoice-fk_target-element_relation"/>
+					<string key="sourceobjectid" value="invoice1"/>
+					<string key="targetobjectid" value="element_relation1"/>
+					<string key="lifecycle" value="add"/>
+				</relation>
+			</relations>
+		</model>
+		<references>
+			<object>
+				<string key="id" value="invoice1"/>
+			</object>
+		</references>
+	</event>
+	<event>
+		<string key="id" value="create_shipment2"/>
+		<string key="activity" value="create_shipment"/>
+		<string key="timestamp" value="2017-08-16 14:15:31"/>
+		<model>
+			<objects>
+				<object>
+					<string key="id" value="shipment2"/>
+					<string key="class" value="shipment"/>
+					<string key="lifecycle" value="add"/>
+					<string key="create_shipment" value="2017-08-16 14:15:31"/>
+					<string key="rowid" value="2"/>
+					<string key="customer" value="1"/>
+				</object>
+				<object>
+					<string key="id" value="shipment_line2"/>
+					<string key="class" value="shipment_line"/>
+					<string key="lifecycle" value="add"/>
+					<string key="orderline_id" value="1"/>
+					<string key="qty" value="1"/>
+					<string key="shipment_id" value="2"/>
+					<string key="rowid" value="2"/>
+				</object>
+				<object>
+					<string key="id" value="shipment_line3"/>
+					<string key="class" value="shipment_line"/>
+					<string key="lifecycle" value="add"/>
+					<string key="orderline_id" value="2"/>
+					<string key="qty" value="3"/>
+					<string key="shipment_id" value="2"/>
+					<string key="rowid" value="3"/>
+				</object>
+			</objects>
+			<relations>
+				<relation>
+					<string key="id" value="customer1-shipment2"/>
+					<string key="relation" value="customer-fk_soc-shipment"/>
+					<string key="sourceobjectid" value="customer1"/>
+					<string key="targetobjectid" value="shipment2"/>
+					<string key="lifecycle" value="add"/>
+				</relation>
+				<relation>
+					<string key="id" value="shipment2-shipment_line2"/>
+					<string key="relation" value="shipment-fk_expedition-shipment_line"/>
+					<string key="sourceobjectid" value="shipment2"/>
+					<string key="targetobjectid" value="shipment_line2"/>
+					<string key="lifecycle" value="add"/>
+				</relation>
+				<relation>
+					<string key="id" value="shipment2-shipment_line3"/>
+					<string key="relation" value="shipment-fk_expedition-shipment_line"/>
+					<string key="sourceobjectid" value="shipment2"/>
+					<string key="targetobjectid" value="shipment_line3"/>
+					<string key="lifecycle" value="add"/>
+				</relation>
+				<relation>
+					<string key="id" value="order_line1-shipment_line2"/>
+					<string key="relation" value="order_line-fk_origin_line-shipment_line"/>
+					<string key="sourceobjectid" value="order_line1"/>
+					<string key="targetobjectid" value="shipment_line2"/>
+					<string key="lifecycle" value="add"/>
+				</relation>
+				<relation>
+					<string key="id" value="order_line2-shipment_line3"/>
+					<string key="relation" value="order_line-fk_origin_line-shipment_line"/>
+					<string key="sourceobjectid" value="order_line2"/>
+					<string key="targetobjectid" value="shipment_line3"/>
+					<string key="lifecycle" value="add"/>
+				</relation>
+			</relations>
+		</model>
+		<references>
+			<object>
+				<string key="id" value="shipment2"/>
+			</object>
+			<object>
+				<string key="id" value="shipment_line2"/>
+			</object>
+			<object>
+				<string key="id" value="shipment_line3"/>
+			</object>
+		</references>
+	</event>
+	<event>
+		<string key="id" value="create_invoice2"/>
+		<string key="activity" value="create_invoice"/>
+		<string key="timestamp" value="2017-08-17 17:38:36"/>
+		<model>
+			<objects>
+				<object>
+					<string key="id" value="invoice2"/>
+					<string key="class" value="invoice"/>
+					<string key="lifecycle" value="add"/>
+					<string key="create_invoice" value="2017-08-17 17:38:36"/>
+					<string key="total_amount_with_tax" value="1431.00000000"/>
+					<string key="customer" value="1"/>
+					<string key="rowid" value="2"/>
+				</object>
+				<object>
+					<string key="id" value="element_relation2"/>
+					<string key="class" value="element_relation"/>
+					<string key="lifecycle" value="add"/>
+					<string key="targettype" value="facture"/>
+					<string key="fk_source" value="1"/>
+					<string key="sourcetype" value="commande"/>
+					<string key="fk_target" value="2"/>
+					<string key="rowid" value="2"/>
+				</object>
+				<object>
+					<string key="id" value="element_relation3"/>
+					<string key="class" value="element_relation"/>
+					<string key="lifecycle" value="add"/>
+					<string key="targettype" value="facture"/>
+					<string key="fk_source" value="2"/>
+					<string key="sourcetype" value="commande"/>
+					<string key="fk_target" value="2"/>
+					<string key="rowid" value="3"/>
+				</object>
+			</objects>
+			<relations>
+				<relation>
+					<string key="id" value="customer1-invoice2"/>
+					<string key="relation" value="customer-fk_soc-invoice"/>
+					<string key="sourceobjectid" value="customer1"/>
+					<string key="targetobjectid" value="invoice2"/>
+					<string key="lifecycle" value="add"/>
+				</relation>
+				<relation>
+					<string key="id" value="order1-element_relation2"/>
+					<string key="relation" value="order-fk_source-element_relation"/>
+					<string key="sourceobjectid" value="order1"/>
+					<string key="targetobjectid" value="element_relation2"/>
+					<string key="lifecycle" value="add"/>
+				</relation>
+				<relation>
+					<string key="id" value="order2-element_relation3"/>
+					<string key="relation" value="order-fk_source-element_relation"/>
+					<string key="sourceobjectid" value="order2"/>
+					<string key="targetobjectid" value="element_relation3"/>
+					<string key="lifecycle" value="add"/>
+				</relation>
+				<relation>
+					<string key="id" value="invoice2-element_relation2"/>
+					<string key="relation" value="invoice-fk_target-element_relation"/>
+					<string key="sourceobjectid" value="invoice2"/>
+					<string key="targetobjectid" value="element_relation2"/>
+					<string key="lifecycle" value="add"/>
+				</relation>
+				<relation>
+					<string key="id" value="invoice2-element_relation3"/>
+					<string key="relation" value="invoice-fk_target-element_relation"/>
+					<string key="sourceobjectid" value="invoice2"/>
+					<string key="targetobjectid" value="element_relation3"/>
+					<string key="lifecycle" value="add"/>
+				</relation>
+			</relations>
+		</model>
+		<references>
+			<object>
+				<string key="id" value="invoice2"/>
+			</object>
+		</references>
+	</event>
+	<event>
+		<string key="id" value="create_shipment3"/>
+		<string key="activity" value="create_shipment"/>
+		<string key="timestamp" value="2017-08-19 13:22:04"/>
+		<model>
+			<objects>
+				<object>
+					<string key="id" value="shipment3"/>
+					<string key="class" value="shipment"/>
+					<string key="lifecycle" value="add"/>
+					<string key="create_shipment" value="2017-08-19 13:22:04"/>
+					<string key="rowid" value="3"/>
+					<string key="customer" value="1"/>
+				</object>
+				<object>
+					<string key="id" value="shipment_line4"/>
+					<string key="class" value="shipment_line"/>
+					<string key="lifecycle" value="add"/>
+					<string key="orderline_id" value="3"/>
+					<string key="qty" value="3"/>
+					<string key="shipment_id" value="3"/>
+					<string key="rowid" value="4"/>
+				</object>
+				<object>
+					<string key="id" value="shipment_line5"/>
+					<string key="class" value="shipment_line"/>
+					<string key="lifecycle" value="add"/>
+					<string key="orderline_id" value="4"/>
+					<string key="qty" value="2"/>
+					<string key="shipment_id" value="3"/>
+					<string key="rowid" value="5"/>
+				</object>
+			</objects>
+			<relations>
+				<relation>
+					<string key="id" value="customer1-shipment3"/>
+					<string key="relation" value="customer-fk_soc-shipment"/>
+					<string key="sourceobjectid" value="customer1"/>
+					<string key="targetobjectid" value="shipment3"/>
+					<string key="lifecycle" value="add"/>
+				</relation>
+				<relation>
+					<string key="id" value="shipment3-shipment_line4"/>
+					<string key="relation" value="shipment-fk_expedition-shipment_line"/>
+					<string key="sourceobjectid" value="shipment3"/>
+					<string key="targetobjectid" value="shipment_line4"/>
+					<string key="lifecycle" value="add"/>
+				</relation>
+				<relation>
+					<string key="id" value="shipment3-shipment_line5"/>
+					<string key="relation" value="shipment-fk_expedition-shipment_line"/>
+					<string key="sourceobjectid" value="shipment3"/>
+					<string key="targetobjectid" value="shipment_line5"/>
+					<string key="lifecycle" value="add"/>
+				</relation>
+				<relation>
+					<string key="id" value="order_line3-shipment_line4"/>
+					<string key="relation" value="order_line-fk_origin_line-shipment_line"/>
+					<string key="sourceobjectid" value="order_line3"/>
+					<string key="targetobjectid" value="shipment_line4"/>
+					<string key="lifecycle" value="add"/>
+				</relation>
+				<relation>
+					<string key="id" value="order_line4-shipment_line5"/>
+					<string key="relation" value="order_line-fk_origin_line-shipment_line"/>
+					<string key="sourceobjectid" value="order_line4"/>
+					<string key="targetobjectid" value="shipment_line5"/>
+					<string key="lifecycle" value="add"/>
+				</relation>
+			</relations>
+		</model>
+		<references>
+			<object>
+				<string key="id" value="shipment3"/>
+			</object>
+			<object>
+				<string key="id" value="shipment_line4"/>
+			</object>
+			<object>
+				<string key="id" value="shipment_line5"/>
+			</object>
+		</references>
+	</event>
+	<event>
+		<string key="id" value="create_payment1"/>
+		<string key="activity" value="create_payment"/>
+		<string key="timestamp" value="2017-08-21 16:26:13"/>
+		<model>
+			<objects>
+				<object>
+					<string key="id" value="payment1"/>
+					<string key="class" value="payment"/>
+					<string key="lifecycle" value="add"/>
+					<string key="amount" value="3811.00000000"/>
+					<string key="create_payment" value="2017-08-21 16:26:13"/>
+					<string key="rowid" value="1"/>
+				</object>
+				<object>
+					<string key="id" value="payment_line1"/>
+					<string key="class" value="payment_line"/>
+					<string key="lifecycle" value="add"/>
+					<string key="amount" value="2380.00000000"/>
+					<string key="payment_id" value="1"/>
+					<string key="invoice_id" value="1"/>
+					<string key="rowid" value="1"/>
+				</object>
+				<object>
+					<string key="id" value="payment_line2"/>
+					<string key="class" value="payment_line"/>
+					<string key="lifecycle" value="add"/>
+					<string key="amount" value="1431.00000000"/>
+					<string key="payment_id" value="1"/>
+					<string key="invoice_id" value="2"/>
+					<string key="rowid" value="2"/>
+				</object>
+			</objects>
+			<relations>
+				<relation>
+					<string key="id" value="payment1-payment_line1"/>
+					<string key="relation" value="payment-fk_paiement-payment_line"/>
+					<string key="sourceobjectid" value="payment1"/>
+					<string key="targetobjectid" value="payment_line1"/>
+					<string key="lifecycle" value="add"/>
+				</relation>
+				<relation>
+					<string key="id" value="payment1-payment_line2"/>
+					<string key="relation" value="payment-fk_paiement-payment_line"/>
+					<string key="sourceobjectid" value="payment1"/>
+					<string key="targetobjectid" value="payment_line2"/>
+					<string key="lifecycle" value="add"/>
+				</relation>
+				<relation>
+					<string key="id" value="invoice1-payment_line1"/>
+					<string key="relation" value="invoice-fk_facture-payment_line"/>
+					<string key="sourceobjectid" value="invoice1"/>
+					<string key="targetobjectid" value="payment_line1"/>
+					<string key="lifecycle" value="add"/>
+				</relation>
+				<relation>
+					<string key="id" value="invoice2-payment_line2"/>
+					<string key="relation" value="invoice-fk_facture-payment_line"/>
+					<string key="sourceobjectid" value="invoice2"/>
+					<string key="targetobjectid" value="payment_line2"/>
+					<string key="lifecycle" value="add"/>
+				</relation>
+			</relations>
+		</model>
+		<references>
+			<object>
+				<string key="id" value="payment_line1"/>
+			</object>
+			<object>
+				<string key="id" value="payment_line2"/>
+			</object>
+			<object>
+				<string key="id" value="payment1"/>
+			</object>
+		</references>
+	</event>
+	<event>
+		<string key="id" value="create_invoice3"/>
+		<string key="activity" value="create_invoice"/>
+		<string key="timestamp" value="2017-08-23 14:23:19"/>
+		<model>
+			<objects>
+				<object>
+					<string key="id" value="invoice3"/>
+					<string key="class" value="invoice"/>
+					<string key="lifecycle" value="add"/>
+					<string key="create_invoice" value="2017-08-23 14:23:19"/>
+					<string key="total_amount_with_tax" value="1904.00000000"/>
+					<string key="customer" value="1"/>
+					<string key="rowid" value="3"/>
+				</object>
+				<object>
+					<string key="id" value="element_relation4"/>
+					<string key="class" value="element_relation"/>
+					<string key="lifecycle" value="add"/>
+					<string key="targettype" value="facture"/>
+					<string key="fk_source" value="2"/>
+					<string key="sourcetype" value="commande"/>
+					<string key="fk_target" value="3"/>
+					<string key="rowid" value="4"/>
+				</object>
+			</objects>
+			<relations>
+				<relation>
+					<string key="id" value="customer1-invoice3"/>
+					<string key="relation" value="customer-fk_soc-invoice"/>
+					<string key="sourceobjectid" value="customer1"/>
+					<string key="targetobjectid" value="invoice3"/>
+					<string key="lifecycle" value="add"/>
+				</relation>
+				<relation>
+					<string key="id" value="order2-element_relation4"/>
+					<string key="relation" value="order-fk_source-element_relation"/>
+					<string key="sourceobjectid" value="order2"/>
+					<string key="targetobjectid" value="element_relation4"/>
+					<string key="lifecycle" value="add"/>
+				</relation>
+				<relation>
+					<string key="id" value="invoice3-element_relation4"/>
+					<string key="relation" value="invoice-fk_target-element_relation"/>
+					<string key="sourceobjectid" value="invoice3"/>
+					<string key="targetobjectid" value="element_relation4"/>
+					<string key="lifecycle" value="add"/>
+				</relation>
+			</relations>
+		</model>
+		<references>
+			<object>
+				<string key="id" value="invoice3"/>
+			</object>
+		</references>
+	</event>
+	<event>
+		<string key="id" value="create_payment2"/>
+		<string key="activity" value="create_payment"/>
+		<string key="timestamp" value="2017-08-26 14:53:49"/>
+		<model>
+			<objects>
+				<object>
+					<string key="id" value="payment2"/>
+					<string key="class" value="payment"/>
+					<string key="lifecycle" value="add"/>
+					<string key="amount" value="1904.00000000"/>
+					<string key="create_payment" value="2017-08-26 14:53:49"/>
+					<string key="rowid" value="2"/>
+				</object>
+				<object>
+					<string key="id" value="payment_line3"/>
+					<string key="class" value="payment_line"/>
+					<string key="lifecycle" value="add"/>
+					<string key="amount" value="1904.00000000"/>
+					<string key="payment_id" value="2"/>
+					<string key="invoice_id" value="3"/>
+					<string key="rowid" value="3"/>
+				</object>
+			</objects>
+			<relations>
+				<relation>
+					<string key="id" value="payment2-payment_line3"/>
+					<string key="relation" value="payment-fk_paiement-payment_line"/>
+					<string key="sourceobjectid" value="payment2"/>
+					<string key="targetobjectid" value="payment_line3"/>
+					<string key="lifecycle" value="add"/>
+				</relation>
+				<relation>
+					<string key="id" value="invoice3-payment_line3"/>
+					<string key="relation" value="invoice-fk_facture-payment_line"/>
+					<string key="sourceobjectid" value="invoice3"/>
+					<string key="targetobjectid" value="payment_line3"/>
+					<string key="lifecycle" value="add"/>
+				</relation>
+			</relations>
+		</model>
+		<references>
+			<object>
+				<string key="id" value="payment_line3"/>
+			</object>
+			<object>
+				<string key="id" value="payment2"/>
+			</object>
+		</references>
+	</event>
+</log>
