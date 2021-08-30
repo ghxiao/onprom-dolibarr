@@ -36,8 +36,8 @@ services:
     env_file: .env
     restart: unless-stopped
     environment:
-      ONTOP_ONTOLOGY_FILE: /opt/ontop/input/ERPOrder.owl
-      ONTOP_MAPPING_FILE: /opt/ontop/input/ERPOrder.obda
+      ONTOP_ONTOLOGY_FILE: /opt/ontop/input/OCELERP.owl
+      ONTOP_MAPPING_FILE: /opt/ontop/input/OCELERP.obda
       ONTOP_PROPERTIES_FILE: /opt/ontop/input/ERPOrder.docker.properties
       ONTOP_PORTAL_FILE: /opt/ontop/input/ERPOrder.portal.toml
       ONTOP_CORS_ALLOWED_ORIGINS: "*"

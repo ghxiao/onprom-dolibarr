@@ -1,0 +1,178 @@
+{
+  "@class" : "it.unibz.inf.kaos.data.query.AnnotationQueries",
+  "queries" : [ "java.util.LinkedHashSet", [ {
+    "@class" : "it.unibz.inf.kaos.data.query.BinaryAnnotationQuery",
+    "query" : "SELECT  ?Customer ?_I0_264234301 ?_I1_264234301 ?Order\nWHERE\n  { ?Customer  a                    <http://www.example.com/dolibarr/Customer>\n    BIND(?Customer AS ?_I0_264234301)\n    ?Customer  <http://www.example.com/dolibarr/customer_id>  ?_I1_264234301 ;\n              <http://www.example.com/dolibarr/createOrder>  ?Order\n  }\n",
+    "targetIRI" : "http://onprom.inf.unibz.it/objectType",
+    "firstComponent" : [ "Customer", "_I0_264234301", "_I1_264234301", "Order" ],
+    "secondComponent" : [ "_I0_264234301" ]
+  }, {
+    "@class" : "it.unibz.inf.kaos.data.query.BinaryAnnotationQuery",
+    "query" : "SELECT  ?Customer ?_I1_264234301 ?Order\nWHERE\n  { ?Customer  <http://www.example.com/dolibarr/customer_id>  ?_I1_264234301\n    BIND(?Customer AS ?_I0_264234301)\n    ?Customer  <http://www.example.com/dolibarr/createOrder>  ?Order\n  }\n",
+    "targetIRI" : "http://onprom.inf.unibz.it/object_id",
+    "firstComponent" : [ "Customer", "_I0_264234301", "_I1_264234301", "Order" ],
+    "secondComponent" : [ "_I1_264234301" ]
+  }, {
+    "@class" : "it.unibz.inf.kaos.data.query.BinaryAnnotationQuery",
+    "query" : "SELECT  ?Customer ?Order ?_I1_264234301 (\"createOrder\" AS ?_L_1507000671) ?_I1_1507000671 ?_I3_1507000671\nWHERE\n  { ?Customer  <http://www.example.com/dolibarr/createOrder>  ?Order\n    BIND(?Customer AS ?_I0_264234301)\n    ?Customer  <http://www.example.com/dolibarr/customer_id>  ?_I1_264234301 .\n    ?Order    <http://www.example.com/dolibarr/order_date>  ?_I1_1507000671\n    BIND(?Order AS ?_I2_1507000671)\n    ?Order  <http://www.example.com/dolibarr/order_id>  ?_I3_1507000671\n  }\n",
+    "targetIRI" : "http://onprom.inf.unibz.it/e-containts-o",
+    "firstComponent" : [ "Order", "_L_1507000671", "_I1_1507000671", "_I2_1507000671", "_I3_1507000671" ],
+    "secondComponent" : [ "Customer", "_I0_264234301", "_I1_264234301", "Order" ]
+  }, {
+    "@class" : "it.unibz.inf.kaos.data.query.BinaryAnnotationQuery",
+    "query" : "SELECT  ?Shipment ?_I1_1415173522 (\"createShipment\" AS ?_L_1415173522) ?_I3_1415173522\nWHERE\n  { ?Shipment  <http://www.example.com/dolibarr/shipment_date>  ?_I1_1415173522\n    BIND(?Shipment AS ?_I2_1415173522)\n    ?Shipment  <http://www.example.com/dolibarr/shipment_id>  ?_I3_1415173522\n  }\n",
+    "targetIRI" : "http://onprom.inf.unibz.it/timestamp",
+    "firstComponent" : [ "Shipment", "_L_1415173522", "_I1_1415173522", "_I2_1415173522", "_I3_1415173522" ],
+    "secondComponent" : [ "_I1_1415173522" ]
+  }, {
+    "@class" : "it.unibz.inf.kaos.data.query.BinaryAnnotationQuery",
+    "query" : "SELECT  ?Shipment ?_I2_1415173522 (\"createShipment\" AS ?_L_1415173522) ?_I1_1415173522 ?_I3_1415173522\nWHERE\n  { ?Shipment  a                    <http://www.example.com/dolibarr/Shipment>\n    BIND(?Shipment AS ?_I2_1415173522)\n    ?Shipment  <http://www.example.com/dolibarr/shipment_date>  ?_I1_1415173522 ;\n              <http://www.example.com/dolibarr/shipment_id>  ?_I3_1415173522\n  }\n",
+    "targetIRI" : "http://onprom.inf.unibz.it/activity",
+    "firstComponent" : [ "Shipment", "_L_1415173522", "_I1_1415173522", "_I2_1415173522", "_I3_1415173522" ],
+    "secondComponent" : [ "_I2_1415173522" ]
+  }, {
+    "@class" : "it.unibz.inf.kaos.data.query.BinaryAnnotationQuery",
+    "query" : "SELECT  ?Shipment ?_I3_1415173522 (\"createShipment\" AS ?_L_1415173522) ?_I1_1415173522\nWHERE\n  { ?Shipment  <http://www.example.com/dolibarr/shipment_id>  ?_I3_1415173522 ;\n              <http://www.example.com/dolibarr/shipment_date>  ?_I1_1415173522\n    BIND(?Shipment AS ?_I2_1415173522)\n  }\n",
+    "targetIRI" : "http://onprom.inf.unibz.it/event_id",
+    "firstComponent" : [ "Shipment", "_L_1415173522", "_I1_1415173522", "_I2_1415173522", "_I3_1415173522" ],
+    "secondComponent" : [ "_I3_1415173522" ]
+  }, {
+    "@class" : "it.unibz.inf.kaos.data.query.BinaryAnnotationQuery",
+    "query" : "SELECT  ?Order ?_I1_1507000671 (\"createOrder\" AS ?_L_1507000671) ?_I3_1507000671\nWHERE\n  { ?Order  <http://www.example.com/dolibarr/order_date>  ?_I1_1507000671\n    BIND(?Order AS ?_I2_1507000671)\n    ?Order  <http://www.example.com/dolibarr/order_id>  ?_I3_1507000671\n  }\n",
+    "targetIRI" : "http://onprom.inf.unibz.it/timestamp",
+    "firstComponent" : [ "Order", "_L_1507000671", "_I1_1507000671", "_I2_1507000671", "_I3_1507000671" ],
+    "secondComponent" : [ "_I1_1507000671" ]
+  }, {
+    "@class" : "it.unibz.inf.kaos.data.query.BinaryAnnotationQuery",
+    "query" : "SELECT  ?Order ?_I2_1507000671 (\"createOrder\" AS ?_L_1507000671) ?_I1_1507000671 ?_I3_1507000671\nWHERE\n  { ?Order  a                     <http://www.example.com/dolibarr/Order>\n    BIND(?Order AS ?_I2_1507000671)\n    ?Order  <http://www.example.com/dolibarr/order_date>  ?_I1_1507000671 ;\n            <http://www.example.com/dolibarr/order_id>  ?_I3_1507000671\n  }\n",
+    "targetIRI" : "http://onprom.inf.unibz.it/activity",
+    "firstComponent" : [ "Order", "_L_1507000671", "_I1_1507000671", "_I2_1507000671", "_I3_1507000671" ],
+    "secondComponent" : [ "_I2_1507000671" ]
+  }, {
+    "@class" : "it.unibz.inf.kaos.data.query.BinaryAnnotationQuery",
+    "query" : "SELECT  ?Order ?_I3_1507000671 (\"createOrder\" AS ?_L_1507000671) ?_I1_1507000671\nWHERE\n  { ?Order  <http://www.example.com/dolibarr/order_id>  ?_I3_1507000671 ;\n            <http://www.example.com/dolibarr/order_date>  ?_I1_1507000671\n    BIND(?Order AS ?_I2_1507000671)\n  }\n",
+    "targetIRI" : "http://onprom.inf.unibz.it/event_id",
+    "firstComponent" : [ "Order", "_L_1507000671", "_I1_1507000671", "_I2_1507000671", "_I3_1507000671" ],
+    "secondComponent" : [ "_I3_1507000671" ]
+  }, {
+    "@class" : "it.unibz.inf.kaos.data.query.BinaryAnnotationQuery",
+    "query" : "SELECT  ?Customer ?_I0_1654576002 ?_I1_1654576002 ?Shipment\nWHERE\n  { ?Customer  a                    <http://www.example.com/dolibarr/Customer>\n    BIND(?Customer AS ?_I0_1654576002)\n    ?Customer  <http://www.example.com/dolibarr/customer_id>  ?_I1_1654576002 .\n    ?Shipment  <http://www.example.com/dolibarr/shipTo>  ?Customer\n  }\n",
+    "targetIRI" : "http://onprom.inf.unibz.it/objectType",
+    "firstComponent" : [ "Customer", "_I0_1654576002", "_I1_1654576002", "Shipment" ],
+    "secondComponent" : [ "_I0_1654576002" ]
+  }, {
+    "@class" : "it.unibz.inf.kaos.data.query.BinaryAnnotationQuery",
+    "query" : "SELECT  ?Customer ?_I1_1654576002 ?Shipment\nWHERE\n  { ?Customer  <http://www.example.com/dolibarr/customer_id>  ?_I1_1654576002\n    BIND(?Customer AS ?_I0_1654576002)\n    ?Shipment  <http://www.example.com/dolibarr/shipTo>  ?Customer\n  }\n",
+    "targetIRI" : "http://onprom.inf.unibz.it/object_id",
+    "firstComponent" : [ "Customer", "_I0_1654576002", "_I1_1654576002", "Shipment" ],
+    "secondComponent" : [ "_I1_1654576002" ]
+  }, {
+    "@class" : "it.unibz.inf.kaos.data.query.BinaryAnnotationQuery",
+    "query" : "SELECT  ?Customer ?Shipment ?_I1_1654576002 (\"createShipment\" AS ?_L_1415173522) ?_I1_1415173522 ?_I3_1415173522\nWHERE\n  { ?Shipment  <http://www.example.com/dolibarr/shipTo>  ?Customer\n    BIND(?Customer AS ?_I0_1654576002)\n    ?Customer  <http://www.example.com/dolibarr/customer_id>  ?_I1_1654576002 .\n    ?Shipment  <http://www.example.com/dolibarr/shipment_date>  ?_I1_1415173522\n    BIND(?Shipment AS ?_I2_1415173522)\n    ?Shipment  <http://www.example.com/dolibarr/shipment_id>  ?_I3_1415173522\n  }\n",
+    "targetIRI" : "http://onprom.inf.unibz.it/e-containts-o",
+    "firstComponent" : [ "Shipment", "_L_1415173522", "_I1_1415173522", "_I2_1415173522", "_I3_1415173522" ],
+    "secondComponent" : [ "Customer", "_I0_1654576002", "_I1_1654576002", "Shipment" ]
+  }, {
+    "@class" : "it.unibz.inf.kaos.data.query.BinaryAnnotationQuery",
+    "query" : "SELECT  ?Payment ?_I1_1042106115 (\"createPayment\" AS ?_L_1042106115) ?_I3_1042106115\nWHERE\n  { ?Payment  <http://www.example.com/dolibarr/payment_date>  ?_I1_1042106115\n    BIND(?Payment AS ?_I2_1042106115)\n    ?Payment  <http://www.example.com/dolibarr/payment_id>  ?_I3_1042106115\n  }\n",
+    "targetIRI" : "http://onprom.inf.unibz.it/timestamp",
+    "firstComponent" : [ "Payment", "_L_1042106115", "_I1_1042106115", "_I2_1042106115", "_I3_1042106115" ],
+    "secondComponent" : [ "_I1_1042106115" ]
+  }, {
+    "@class" : "it.unibz.inf.kaos.data.query.BinaryAnnotationQuery",
+    "query" : "SELECT  ?Payment ?_I2_1042106115 (\"createPayment\" AS ?_L_1042106115) ?_I1_1042106115 ?_I3_1042106115\nWHERE\n  { ?Payment  a                     <http://www.example.com/dolibarr/Payment>\n    BIND(?Payment AS ?_I2_1042106115)\n    ?Payment  <http://www.example.com/dolibarr/payment_date>  ?_I1_1042106115 ;\n              <http://www.example.com/dolibarr/payment_id>  ?_I3_1042106115\n  }\n",
+    "targetIRI" : "http://onprom.inf.unibz.it/activity",
+    "firstComponent" : [ "Payment", "_L_1042106115", "_I1_1042106115", "_I2_1042106115", "_I3_1042106115" ],
+    "secondComponent" : [ "_I2_1042106115" ]
+  }, {
+    "@class" : "it.unibz.inf.kaos.data.query.BinaryAnnotationQuery",
+    "query" : "SELECT  ?Payment ?_I3_1042106115 (\"createPayment\" AS ?_L_1042106115) ?_I1_1042106115\nWHERE\n  { ?Payment  <http://www.example.com/dolibarr/payment_id>  ?_I3_1042106115 ;\n              <http://www.example.com/dolibarr/payment_date>  ?_I1_1042106115\n    BIND(?Payment AS ?_I2_1042106115)\n  }\n",
+    "targetIRI" : "http://onprom.inf.unibz.it/event_id",
+    "firstComponent" : [ "Payment", "_L_1042106115", "_I1_1042106115", "_I2_1042106115", "_I3_1042106115" ],
+    "secondComponent" : [ "_I3_1042106115" ]
+  }, {
+    "@class" : "it.unibz.inf.kaos.data.query.BinaryAnnotationQuery",
+    "query" : "SELECT  ?Invoice ?_I1_606228744 (\"createInvoice\" AS ?_L_606228744) ?_I3_606228744\nWHERE\n  { ?Invoice  <http://www.example.com/dolibarr/invoice_date>  ?_I1_606228744\n    BIND(?Invoice AS ?_I2_606228744)\n    ?Invoice  <http://www.example.com/dolibarr/invoice_id>  ?_I3_606228744\n  }\n",
+    "targetIRI" : "http://onprom.inf.unibz.it/timestamp",
+    "firstComponent" : [ "Invoice", "_L_606228744", "_I1_606228744", "_I2_606228744", "_I3_606228744" ],
+    "secondComponent" : [ "_I1_606228744" ]
+  }, {
+    "@class" : "it.unibz.inf.kaos.data.query.BinaryAnnotationQuery",
+    "query" : "SELECT  ?Invoice ?_I2_606228744 (\"createInvoice\" AS ?_L_606228744) ?_I1_606228744 ?_I3_606228744\nWHERE\n  { ?Invoice  a                     <http://www.example.com/dolibarr/Invoice>\n    BIND(?Invoice AS ?_I2_606228744)\n    ?Invoice  <http://www.example.com/dolibarr/invoice_date>  ?_I1_606228744 ;\n              <http://www.example.com/dolibarr/invoice_id>  ?_I3_606228744\n  }\n",
+    "targetIRI" : "http://onprom.inf.unibz.it/activity",
+    "firstComponent" : [ "Invoice", "_L_606228744", "_I1_606228744", "_I2_606228744", "_I3_606228744" ],
+    "secondComponent" : [ "_I2_606228744" ]
+  }, {
+    "@class" : "it.unibz.inf.kaos.data.query.BinaryAnnotationQuery",
+    "query" : "SELECT  ?Invoice ?_I3_606228744 (\"createInvoice\" AS ?_L_606228744) ?_I1_606228744\nWHERE\n  { ?Invoice  <http://www.example.com/dolibarr/invoice_id>  ?_I3_606228744 ;\n              <http://www.example.com/dolibarr/invoice_date>  ?_I1_606228744\n    BIND(?Invoice AS ?_I2_606228744)\n  }\n",
+    "targetIRI" : "http://onprom.inf.unibz.it/event_id",
+    "firstComponent" : [ "Invoice", "_L_606228744", "_I1_606228744", "_I2_606228744", "_I3_606228744" ],
+    "secondComponent" : [ "_I3_606228744" ]
+  }, {
+    "@class" : "it.unibz.inf.kaos.data.query.BinaryAnnotationQuery",
+    "query" : "SELECT  ?Product ?_I0_1667645517 ?_I1_1667645517 ?Order\nWHERE\n  { ?Product  <http://www.example.com/dolibarr/product_id>  ?_I0_1667645517 ;\n              <http://www.example.com/dolibarr/product_id>  ?_I1_1667645517\n    BIND(?Product AS ?_I2_1667645517)\n    ?OrderItem  <http://www.example.com/dolibarr/hasProduct>  ?Product ;\n              <http://www.example.com/dolibarr/relatedOrder>  ?Order\n  }\n",
+    "targetIRI" : "http://onprom.inf.unibz.it/attValue",
+    "firstComponent" : [ "Product", "_I0_1667645517", "_I1_1667645517", "_I2_1667645517", "Order" ],
+    "secondComponent" : [ "_I0_1667645517" ]
+  }, {
+    "@class" : "it.unibz.inf.kaos.data.query.BinaryAnnotationQuery",
+    "query" : "SELECT  ?Product ?_I1_1667645517 ?_I0_1667645517 ?Order\nWHERE\n  { ?Product  <http://www.example.com/dolibarr/product_id>  ?_I1_1667645517 ;\n              <http://www.example.com/dolibarr/product_id>  ?_I0_1667645517\n    BIND(?Product AS ?_I2_1667645517)\n    ?OrderItem  <http://www.example.com/dolibarr/hasProduct>  ?Product ;\n              <http://www.example.com/dolibarr/relatedOrder>  ?Order\n  }\n",
+    "targetIRI" : "http://onprom.inf.unibz.it/attKey",
+    "firstComponent" : [ "Product", "_I0_1667645517", "_I1_1667645517", "_I2_1667645517", "Order" ],
+    "secondComponent" : [ "_I1_1667645517" ]
+  }, {
+    "@class" : "it.unibz.inf.kaos.data.query.BinaryAnnotationQuery",
+    "query" : "SELECT  ?Product ?_I2_1667645517 ?_I0_1667645517 ?_I1_1667645517 ?Order\nWHERE\n  { ?Product  a                     <http://www.example.com/dolibarr/Product>\n    BIND(?Product AS ?_I2_1667645517)\n    ?Product  <http://www.example.com/dolibarr/product_id>  ?_I0_1667645517 ;\n              <http://www.example.com/dolibarr/product_id>  ?_I1_1667645517 .\n    ?OrderItem  <http://www.example.com/dolibarr/hasProduct>  ?Product ;\n              <http://www.example.com/dolibarr/relatedOrder>  ?Order\n  }\n",
+    "targetIRI" : "http://onprom.inf.unibz.it/attType",
+    "firstComponent" : [ "Product", "_I0_1667645517", "_I1_1667645517", "_I2_1667645517", "Order" ],
+    "secondComponent" : [ "_I2_1667645517" ]
+  }, {
+    "@class" : "it.unibz.inf.kaos.data.query.BinaryAnnotationQuery",
+    "query" : "SELECT  ?Product ?Order ?_I0_1667645517 ?_I1_1667645517 (\"createOrder\" AS ?_L_1507000671) ?_I1_1507000671 ?_I3_1507000671\nWHERE\n  { ?OrderItem  <http://www.example.com/dolibarr/hasProduct>  ?Product ;\n              <http://www.example.com/dolibarr/relatedOrder>  ?Order .\n    ?Product  <http://www.example.com/dolibarr/product_id>  ?_I0_1667645517 ;\n              <http://www.example.com/dolibarr/product_id>  ?_I1_1667645517\n    BIND(?Product AS ?_I2_1667645517)\n    ?Order  <http://www.example.com/dolibarr/order_date>  ?_I1_1507000671\n    BIND(?Order AS ?_I2_1507000671)\n    ?Order  <http://www.example.com/dolibarr/order_id>  ?_I3_1507000671\n  }\n",
+    "targetIRI" : "http://onprom.inf.unibz.it/e-has-a",
+    "firstComponent" : [ "Order", "_L_1507000671", "_I1_1507000671", "_I2_1507000671", "_I3_1507000671" ],
+    "secondComponent" : [ "Product", "_I0_1667645517", "_I1_1667645517", "_I2_1667645517", "Order" ]
+  }, {
+    "@class" : "it.unibz.inf.kaos.data.query.BinaryAnnotationQuery",
+    "query" : "SELECT  ?Product ?_I0_1667645517 ?_I1_1667645517 ?Order (\"product\" AS ?_L_1925728229) ?_I2_1925728229\nWHERE\n  { ?Product  a                     <http://www.example.com/dolibarr/Product> ;\n              <http://www.example.com/dolibarr/product_id>  ?_I0_1667645517 ;\n              <http://www.example.com/dolibarr/product_id>  ?_I1_1667645517\n    BIND(?Product AS ?_I2_1667645517)\n    ?OrderItem  <http://www.example.com/dolibarr/hasProduct>  ?Product ;\n              <http://www.example.com/dolibarr/relatedOrder>  ?Order\n    BIND(?Product AS ?_I1_1925728229)\n    ?Product  <http://www.example.com/dolibarr/product_id>  ?_I2_1925728229 .\n    ?OrderItem  <http://www.example.com/dolibarr/hasProduct>  ?Product ;\n              <http://www.example.com/dolibarr/relatedOrder>  ?Order\n  }\n",
+    "targetIRI" : "http://onprom.inf.unibz.it/o-has-a",
+    "firstComponent" : [ "Product", "_L_1925728229", "_I1_1925728229", "_I2_1925728229", "Order" ],
+    "secondComponent" : [ "Product", "_I0_1667645517", "_I1_1667645517", "_I2_1667645517", "Order" ]
+  }, {
+    "@class" : "it.unibz.inf.kaos.data.query.BinaryAnnotationQuery",
+    "query" : "SELECT  ?Product ?_I1_1925728229 (\"product\" AS ?_L_1925728229) ?_I2_1925728229 ?Order\nWHERE\n  { ?Product  a                     <http://www.example.com/dolibarr/Product>\n    BIND(?Product AS ?_I1_1925728229)\n    ?Product  <http://www.example.com/dolibarr/product_id>  ?_I2_1925728229 .\n    ?OrderItem  <http://www.example.com/dolibarr/hasProduct>  ?Product ;\n              <http://www.example.com/dolibarr/relatedOrder>  ?Order\n  }\n",
+    "targetIRI" : "http://onprom.inf.unibz.it/objectType",
+    "firstComponent" : [ "Product", "_L_1925728229", "_I1_1925728229", "_I2_1925728229", "Order" ],
+    "secondComponent" : [ "_I1_1925728229" ]
+  }, {
+    "@class" : "it.unibz.inf.kaos.data.query.BinaryAnnotationQuery",
+    "query" : "SELECT  ?Product ?_I2_1925728229 (\"product\" AS ?_L_1925728229) ?Order\nWHERE\n  { ?Product  <http://www.example.com/dolibarr/product_id>  ?_I2_1925728229\n    BIND(?Product AS ?_I1_1925728229)\n    ?OrderItem  <http://www.example.com/dolibarr/hasProduct>  ?Product ;\n              <http://www.example.com/dolibarr/relatedOrder>  ?Order\n  }\n",
+    "targetIRI" : "http://onprom.inf.unibz.it/object_id",
+    "firstComponent" : [ "Product", "_L_1925728229", "_I1_1925728229", "_I2_1925728229", "Order" ],
+    "secondComponent" : [ "_I2_1925728229" ]
+  }, {
+    "@class" : "it.unibz.inf.kaos.data.query.BinaryAnnotationQuery",
+    "query" : "SELECT  ?Product ?Order (\"product\" AS ?_L_1925728229) ?_I2_1925728229 (\"createOrder\" AS ?_L_1507000671) ?_I1_1507000671 ?_I3_1507000671\nWHERE\n  { ?OrderItem  <http://www.example.com/dolibarr/hasProduct>  ?Product ;\n              <http://www.example.com/dolibarr/relatedOrder>  ?Order\n    BIND(?Product AS ?_I1_1925728229)\n    ?Product  <http://www.example.com/dolibarr/product_id>  ?_I2_1925728229 .\n    ?Order    <http://www.example.com/dolibarr/order_date>  ?_I1_1507000671\n    BIND(?Order AS ?_I2_1507000671)\n    ?Order  <http://www.example.com/dolibarr/order_id>  ?_I3_1507000671\n  }\n",
+    "targetIRI" : "http://onprom.inf.unibz.it/e-containts-o",
+    "firstComponent" : [ "Order", "_L_1507000671", "_I1_1507000671", "_I2_1507000671", "_I3_1507000671" ],
+    "secondComponent" : [ "Product", "_L_1925728229", "_I1_1925728229", "_I2_1925728229", "Order" ]
+  }, {
+    "@class" : "it.unibz.inf.kaos.data.query.BinaryAnnotationQuery",
+    "query" : "SELECT  ?Customer ?_I0_199587608 ?_I1_199587608 ?Invoice\nWHERE\n  { ?Customer  a                    <http://www.example.com/dolibarr/Customer>\n    BIND(?Customer AS ?_I0_199587608)\n    ?Customer  <http://www.example.com/dolibarr/customer_id>  ?_I1_199587608 ;\n              <http://www.example.com/dolibarr/createOrder>  ?Order .\n    ?Invoice  <http://www.example.com/dolibarr/invoiceOf>  ?Order\n  }\n",
+    "targetIRI" : "http://onprom.inf.unibz.it/objectType",
+    "firstComponent" : [ "Customer", "_I0_199587608", "_I1_199587608", "Invoice" ],
+    "secondComponent" : [ "_I0_199587608" ]
+  }, {
+    "@class" : "it.unibz.inf.kaos.data.query.BinaryAnnotationQuery",
+    "query" : "SELECT  ?Customer ?_I1_199587608 ?Invoice\nWHERE\n  { ?Customer  <http://www.example.com/dolibarr/customer_id>  ?_I1_199587608\n    BIND(?Customer AS ?_I0_199587608)\n    ?Customer  <http://www.example.com/dolibarr/createOrder>  ?Order .\n    ?Invoice  <http://www.example.com/dolibarr/invoiceOf>  ?Order\n  }\n",
+    "targetIRI" : "http://onprom.inf.unibz.it/object_id",
+    "firstComponent" : [ "Customer", "_I0_199587608", "_I1_199587608", "Invoice" ],
+    "secondComponent" : [ "_I1_199587608" ]
+  }, {
+    "@class" : "it.unibz.inf.kaos.data.query.BinaryAnnotationQuery",
+    "query" : "SELECT  ?Customer ?Invoice ?_I1_199587608 (\"createInvoice\" AS ?_L_606228744) ?_I1_606228744 ?_I3_606228744\nWHERE\n  { ?Customer  <http://www.example.com/dolibarr/createOrder>  ?Order .\n    ?Invoice  <http://www.example.com/dolibarr/invoiceOf>  ?Order\n    BIND(?Customer AS ?_I0_199587608)\n    ?Customer  <http://www.example.com/dolibarr/customer_id>  ?_I1_199587608 .\n    ?Invoice  <http://www.example.com/dolibarr/invoice_date>  ?_I1_606228744\n    BIND(?Invoice AS ?_I2_606228744)\n    ?Invoice  <http://www.example.com/dolibarr/invoice_id>  ?_I3_606228744\n  }\n",
+    "targetIRI" : "http://onprom.inf.unibz.it/e-containts-o",
+    "firstComponent" : [ "Invoice", "_L_606228744", "_I1_606228744", "_I2_606228744", "_I3_606228744" ],
+    "secondComponent" : [ "Customer", "_I0_199587608", "_I1_199587608", "Invoice" ]
+  } ] ]
+}
